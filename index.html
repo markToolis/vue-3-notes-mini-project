@@ -14,8 +14,7 @@
         <div class="form-control">
           <input type="text"
            :placeholder="placeholder"
-           :value="inputValue"
-           @input="inputChengeHadler"
+            v-model="inputValue"
            @keypress.enter="addNewNote">
         </div>
         <div class="">

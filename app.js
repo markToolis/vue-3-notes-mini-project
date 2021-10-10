@@ -1,7 +1,7 @@
 const App = {
     data() {
         return{
-            placeholder:"Введите название заметки",
+            placeholder:"Введите название заметки (макс. 100 симв.)",
             title: "Список заметок",
             inputValue: '',
             notes: []
@@ -9,9 +9,6 @@ const App = {
         }
     },
     methods: {
-        inputChengeHadler(e){
-            this.inputValue = e.target.value
-        },
         addNewNote(){
             if(this.inputValue !== ''){
                 this.notes.unshift(this.inputValue)
