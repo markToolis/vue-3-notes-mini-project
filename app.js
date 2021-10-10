@@ -31,8 +31,12 @@ const App = {
     },
     watch:{
         inputValue(value){
+            if(value.length > 100){
+                this.inputValue = 0
+            }
             console.log(value)
         }
+        
     } 
 }
 
