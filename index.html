@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+
+    <div class="container" id="appp"> <!-- корневой узел -->
+      <div class="card">
+        <h1>{{ title }}</h1>
+        <div class="form-control">
+          <input type="text"
+           :placeholder="placeholder"
+           :value="inputValue"
+           @input="inputChengeHadler"
+           @keypress.enter="addNewNote">
+        </div>
+        <div class="">
+          <button class="btn" v-on:click="addNewNote">Добавить</button>
+          <hr>
+          <ul class="list" v-if="notes.length !== 0">
+            <li class="list-item" v-for="myNote in notes">
+              {{ toUpperCase(myNote) }}
+              <button class="btn danger" @click="deleteNote" >delete</button>
+            </li>
+          </ul>
+          <div class="" v-else">Заметок пока нет</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
