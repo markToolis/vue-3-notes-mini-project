@@ -25,6 +25,14 @@ const App = {
             return i.toUpperCase()
         }
 
+    },
+    computed: {
+
+    },
+    watch:{
+        inputValue(value){
+            console.log(value)
+        }
     } 
 }
 
